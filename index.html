@@ -63,6 +63,86 @@
 		.dropdown:hover .dropdown-content {
 			display: block;
 		}
+        {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .form-container {
+            flex-basis: 60%;
+            margin-right: 20px;
+        }
+        
+        .form-container h2 {
+            margin-top: 0;
+        }
+        
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        form input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        
+        .info-container {
+            flex-basis: 35%;
+        }
+        
+        .info-container h2 {
+            margin-top: 0;
+        }
+        
+        .social-media {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-media a {
+            margin-right: 10px;
+        }
+    
+        #social_img {
+            height: 20px;
+            width: 20px;
+    
+        }
+        
 	</style>
 </head>
 <body>
@@ -82,91 +162,6 @@
 	</nav>
 </body>
 </html>
-
-
-
-<style>
-    * {
-        box-sizing: border-box;
-    }
-    
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    
-    .form-container {
-        flex-basis: 60%;
-        margin-right: 20px;
-    }
-    
-    .form-container h2 {
-        margin-top: 0;
-    }
-    
-    form {
-        background-color: #f2f2f2;
-        padding: 20px;
-        border-radius: 5px;
-    }
-    
-    form label {
-        display: block;
-        margin-bottom: 5px;
-    }
-    
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-        display: block;
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: none;
-    }
-    
-    form input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    form input[type="submit"]:hover {
-        background-color: #3e8e41;
-    }
-    
-    .info-container {
-        flex-basis: 35%;
-    }
-    
-    .info-container h2 {
-        margin-top: 0;
-    }
-    
-    .social-media {
-        display: flex;
-        margin-top: 20px;
-    }
-    
-    .social-media a {
-        margin-right: 10px;
-    }
-
-    #social_img {
-        height: 20px;
-        width: 20px;
-
-    }
-    
-</style>
 	<title>Contact Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 <body>
@@ -187,12 +182,13 @@
 		</div>
 		<div class="info-container">
 			<h2>Jay Patel</h2>
-			<p>Web Developer</p>
+			<p>
+                <b>Google Analytics Certified | Microsoft Certified Systems Engineer | Python, C, C++, C#, Java</b></p>
+            <p><b>Email: </b>Pateljay780@gmail.com</p>
 			<div class="social-media">
 				<a href="https://www.linkedin.com/in/jayspatel02/"><img src="linkedin.png" alt="LinkedIn" id="social_img"></a>
-				<a href="#"><img src="twitter.png" alt="Twitter"></a>
-				<a href="#"><img src="facebook.png" alt="Facebook"></a>
-				<a href="#"><img src="instagram.png" alt="Instagram"></a>
+				<a href="https://www.facebook.com/profile.php?id=100001878538228"><img src="facebook.png" alt="Facebook" id="social_img"></a>
+				<a href="#"><img src="instagram.png" alt="Instagram" id="social_img"></a>
 			</div>
 		</div>
 	</div>
