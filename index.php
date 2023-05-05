@@ -1,0 +1,522 @@
+<!--#include virtual="../common/main.html"-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation Bar Example with Dropdown Menu</title>
+<!--#include virtual="../common/main.html"-->
+<!--#include virtual="../common/main.html"-->
+  <style>
+		body {
+			background-color: whitesmoke;
+		}
+    #nav_bar {
+      margin: 0 auto;
+    }
+		nav {
+			background-color: black;
+			overflow: hidden;
+		}
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+		}
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+		.dropdown {
+			float: left;
+			overflow: hidden;
+		}
+		.dropdown .dropbtn {
+			font-size: 18px;
+			border: none;
+			outline: none;
+			color: white;
+			padding: 14px 16px;
+			background-color: inherit;
+			font-family: inherit;
+			margin: 0;
+		}
+		nav a:hover, .dropdown:hover .dropbtn {
+			background-color: #ddd;
+			color: black;
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		.dropdown-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+            align-items: center;
+		}
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .form-container {
+            flex-basis: 50%;
+            margin-right: 20px;
+        }
+        
+        .form-container h2 {
+            margin-top: 0;
+        }
+        
+        form {
+            background-color:whitesmoke;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        form input[type="submit"] {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        form input[type="submit"]:hover {
+            background-color: grey;
+        }
+        
+        .info-container {
+            flex-basis: 35%;
+        }
+        
+        .info-container h2 {
+            margin-top: 0;
+        }
+        
+        .social-media {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-media a {
+            margin-right: 10px;
+        }
+    
+        #social_img {
+            height: 20px;
+            width: 20px;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+          }
+    
+          .image {
+            height: 50%;
+            width: 40%;
+            padding: 20px;
+          }
+    
+          .details {
+            width: 50%;
+            padding: 20px;
+            border-left: 1px solid black;
+          }
+    
+          h2 {
+            margin-top: 0;
+          }
+          section {
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            margin-top: 20px;
+          }
+
+          #exp_111{
+          }
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.dark-mode-toggle label {
+  display: inline-block;
+  height: 30px;
+  width: 50px;
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dark-mode-toggle label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 3px;
+  left: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+  display: none;
+}
+
+body.dark-mode h1, body.dark-mode p {
+  color: #fff;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label {
+  background-color: #444;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + label::before {
+  transform: translateX(20px);
+  background-color: #000000;
+  color: white !important;
+}
+
+	</style>
+
+
+
+<body id="body">
+	<nav>
+    <div class="nav_bar">
+		<a href="#experince_1">Experience</a>
+		<div class="dropdown">
+			<button class="dropbtn">Projects</button>
+			<div class="dropdown-content">
+				<a href="#school_section">School Project</a>
+				<a href="#work_section">Work Project</a>
+        <a href="#research_section">Research Project</a>
+			</div>
+		</div>
+        <a href="#">Certification</a>
+        <a href="#expertise_id">Expertise</a>
+		<a href="#contact_page">Contact me</a>
+    </div>
+      <div class="dark-mode-toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle"></label>
+      </div>
+    
+	</nav>
+</body>
+
+<section class="section_start">
+    <title>Person Details</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="jay_profile_pic.jpeg" alt="Person Image" width="80%">
+      </div>
+      <div class="info-container">
+        <div id="text-color">
+        <h2 id="text-color">Jay Patel</h2>
+         <h5 id="text-color">Information Technology Co-op | Developer | Google Analytics Certified | Microsoft Certified Systems Engineer | C, C++, C#, Java, Python, MATLAB, Deep learning, Machine learning - Computer Vision, training
+          dataset, React, Swift, SQL, Bootstrap, Oracle</h5>
+          </div>
+        <div class="social-media">
+          <a href="https://www.linkedin.com/in/jayspatel02/"><img src="linkedin.png" alt="LinkedIn" id="social_img"></a>
+          <a href="https://www.facebook.com/profile.php?id=100001878538228"><img src="facebook.png" alt="Facebook" id="social_img"></a>
+          <a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" id="social_img"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</section>
+
+
+<section>
+  <div id="text-color">
+  <title >Experience</title>
+  <div class="section" id="experince_1">
+    <h2 class="section-title" id="text-color">Experience</h2>
+    <div class="project">
+      <h3 class="project-title">Hello! I'm Jay Patel</h3>
+      <p class="project-type">Google Analytics Certified | Microsoft Certified Systems engineer | Microsoft Certified Systems Engineer | Microsoft Certified Solutions Expert: Cloud Platform Infrastructure | Microsoft Professional Certified | Microsoft Solution Developer</p>
+      <p class="project-description">I have more than 4+ years of experience in IT industry. Right after high school I successfully completed 10 Exams of Microsoft & Google. I started working as a Google trainer/instructor and consultant. Then I was also a Business development officer which gave me an edge in understanding customers/clients. Afterward, I was an IT team leader and started my education right before COVID started. In the years 2021, 2022, and 2023 I had 2 internships that gave me hands-on experience as an information systems intern and Information Technology Coop</p>
+    </div>
+    </div>
+    </div>
+</section>
+
+    <title>My Projects</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .section {
+        padding: 50px;
+      }
+
+      .section-title {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .project {
+        margin-bottom: 20px;
+      }
+
+      .project-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .project-description {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .project-type {
+        font-style: italic;
+      }
+      
+    </style>
+  <section>
+    <div class="section">
+      <h2 class="section-title" id="work_section">Work Projects</h2>
+      <div class="project">
+        <h3 class="project-title">Project 1</h3>
+        <p class="project-type">Work Project</p>
+        <p class="project-description">Details about the work project.</p>
+      </div>
+      <div class="project">
+        <h3 class="project-title">Project 2</h3>
+        <p class="project-type">Work Project</p>
+        <p class="project-description">Details about the work project.</p>
+      </div>
+      <div class="project">
+        <h3 class="project-title">Project 3</h3>
+        <p class="project-type">Work Project</p>
+        <p class="project-description">Details about the work project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section">
+      <h2 class="section-title" id="school_section">School Projects</h2>
+      <div class="project">
+        <h6 class="project-title">CSCE 156 project</h6>
+        <p class="project-type">School Project</p>
+        <p class="project-description">Details about the school project.</p>
+      </div>
+      <div class="project">
+        <h6 class="project-title">CSCE 361 project</h6>
+        <p class="project-type">School Project</p>
+        <p class="project-description">Details about the school project.</p>
+        </div>
+        <div class="project">
+        <h6 class="project-title">CSCE401/402H Design Studio project</h6>
+        <p class="project-type">School Project</p>
+        <p class="project-description">Details about the school project.</p>
+        </div>
+      </section>
+
+
+      <section>
+        <div class="section">
+          <h2 class="section-title" id="research_section">Research Project </h2>
+          <div class="project">
+            <h6 class="project-title">UCARE project for National Science Foundation</h6>
+            <p class="project-type">Network Heterogeneous Technology</p>
+            <p class="project-description">Details about the school project.</p>
+          </div>
+          </section>
+
+        &nbsp;
+        &nbsp;
+
+<section>
+  <div id="exp_111">
+  <div class="section">
+  <title>Expertise</title>
+  <div class="project" id="expertise_id">
+    <h2 class="section-title">Expertise</h2>
+  </div>
+  <div style="display: flex; justify-content: space-between; padding: 20px">
+  <div style="text-align: left; flex: 1">
+    <h2 style="margin-bottom: 10px">I'm a Team Player</h2>
+    <p style="padding-right: 20px">I'm a Team player. I believe in team work and team coordination. Team work makes the project or given task easy and more precision. Since all the members work and coordinate with each other and fill the loopholes in order to successfully not only complete the project but also it runs smoothly without any error.</p>
+  </div>
+  <div style="text-align: left; flex: 1">
+    <h2 style="margin-bottom: 10px">I'm a Helper</h2>
+    <p style="padding-right: 20px">I'm a Helper. I believing in helping all the members of a company where I work because we all for one family and we all have on goal to make everything working and going good. If any help is request then I believe to help and if I see somebody who is in need of help then I would probably offer my help.</p>
+  </div>
+  <div style="text-align: left; flex: 1">
+    <h2 style="margin-bottom: 10px">I strive for preciseness </h2>
+    <p style="padding-right: 20px">I aim for preciseness. I believe any work or given task should be done by 100% preciseness and make sure that no errors are being faced and if it runs though an error or bug then troubleshoot in time so in future it should create any other problem. A work should always done errors-less however we are humans we make mistake or we forgot but I believe that we can always strive for more and more preciseness </p>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<style>
+  .slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+</style>
+
+<section>
+<div class="slideshow-container">
+  <img class="mySlides" src="IMG_1.jpg">
+  <img class="mySlides" src="IMG_2.jpg">
+  <img class="mySlides" src="IMG_3.jpg">
+  <img class="mySlides" src="IMG_4.jpg">
+  <img class="mySlides" src="IMG_5.jpg">
+  <img class="mySlides" src="IMG_6.jpg">
+  <img class="mySlides" src="IMG_7.jpg">
+</div>
+</section>
+
+<script>
+  var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000);// Change every 2 seconds
+}
+
+  </script>
+
+<section>
+	<title>Contact Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+	<div class="container" id="contact_page">
+		<div class="form-container">
+			<h2>Contact Us</h2>
+			<form action="sql.php" method="post">
+
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="fname" required>
+
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lname" required>
+
+				<label for="email">Email Address</label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="message">Message</label>
+				<textarea id="message" name="message" required></textarea>
+
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<div class="info-container">
+			<h2>Jay Patel</h2>
+			<p>
+                <b>Google Analytics Certified | Microsoft Certified Systems Engineer | Python, C, C++, C#, Java</b></p>
+            <p><b>Email: </b>Pateljay780@gmail.com</p>
+			<div class="social-media">
+				<a href="https://www.linkedin.com/in/jayspatel02/"><img src="linkedin.png" alt="LinkedIn" id="social_img"></a>
+				<a href="https://www.facebook.com/profile.php?id=100001878538228"><img src="facebook.png" alt="Facebook" id="social_img"></a>
+				<a href="https://www.instagram.com"><img src="instagram.png" alt="Instagram" id="social_img"></a>
+			</div>
+		</div>
+	</div>
+</section>
+</head>
+</body>
+</html>
+
+<script>
+  function toggleDarkMode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    if (element.classList.contains("dark-mode")) {
+      element.style.backgroundColor = "black";
+    } else {
+      element.style.backgroundColor = "white";
+    }
+    var p = document.getElementById("text-color")
+    p.classList.toggle("dark-mode");
+    if (p.classList.contains("dark-mode")) {
+      p.style.color = "white";
+    } else {
+      p.style.color = "black";
+    }
+  }
+  
+  var toggle = document.getElementById("toggle");
+  toggle.addEventListener("click", toggleDarkMode);
+  
+</script>
